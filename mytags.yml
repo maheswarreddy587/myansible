@@ -11,8 +11,9 @@
   - name: install wget
     apt:
       name: wget
-      state: present
+      stateeee: present
     tags: mywget
+    ignore_errors: yes
 
   - name: install tree
     apt:
