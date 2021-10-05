@@ -1,0 +1,14 @@
+---
+  - name: install and configure tomcat
+    hosts: all
+    gathering_facts: yes
+    become: yes
+    tasks:
+      - name: updating repos
+        apt:
+          name: "*"
+          state: latest
+      - name: installing required java
+        apt:
+          name: java-1.8.0.openjdk
+          state: present
